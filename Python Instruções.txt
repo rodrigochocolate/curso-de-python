@@ -1,0 +1,571 @@
+CURSO DE PYTHON 3 - MUNDO01 - CURSO EM VÍDEO!
+
+AULA04: (Primeiro comandos em python!)
+
+    - Funções sempre usam parenteses
+        ex: print('Olá, Mundo!')
+
+    - Toda mensagem tem que estar entre ''
+
+    - Toda variável é um objeto
+        toda variável recebe um valor
+
+    - Print significa 'escreva'
+
+    - Input significa 'leia'
+        uma variável que usa input recebe o valor do usuário
+
+AULA05: (Instalando PyCharm)
+
+    - Instalando PyCharm
+
+AULA06: (Tipos Primitivos e Saída de Dados)
+
+    - '=' se lê 'recebe'
+
+    - Tipos primitivos
+         exemplos:
+             int 7, -4, 0, 9875 (Número inteiro)
+             float 4.5, 0.076, -15.223, 7.0 (Número flutuante)
+             bool True, False (Verdadeiro ou Falso)
+             str 'Olá', '7.5', '' (Texto)
+
+    - Format
+        n1 = int(input('Digite um valor: '))
+	    n2 = int(input('Digite outro: '))
+        s = n1 + n2
+        print('A soma entre {} e {} é {}'.format(n1, n2, s))
+
+AULA07: (Operadores Aritméticos)
+    - '==' se lê 'igual'
+
+    - Operadores Aritméticos
+        + = Adição         ** = Potência
+        - = Subtração      // = Divisão Inteira
+        * = Multiplicação  %  = Resto da Divisão
+        / = Divisão
+        exemplos:
+            5 + 2 ==  7        5 ** 2 == 25
+            5 - 2 ==  3        5 // 2 == 02
+            5 * 2 == 10        5 %  2 == 01
+            5 / 2 == 2.5       'Oi' * 2 == 'OiOi'
+
+    - Ordem de Precedência
+        1º = ()
+        2º = **
+        3º = *, /, //, %
+        4º = +, -
+        exemplos:
+            5 + 3 * 2        == 011 # 3 vezes a 2 + 5
+            3 * 5 + 4 ** 2   == 031 # 4 elevado a 2, 3 vezes 5, soma entre os valores
+            3 * (5 + 4) ** 2 == 243 # 5 mais 4 elevado a 2 vezes 3
+            pow(3, 4)        == 081 # 3 elevado a 4
+            081 ** (1 / 2)   == 009 # Raiz quadrada de 81
+            125 ** (1 / 3)   == 005 # Raiz cubica   de 125
+
+    - Mais sobre print
+        - Mais sobre a formatação
+            nome = input('Qual é seu nome? ')
+            print(f'Prazer em te conhecer {nome:=^20}!') # Imprime o nome no meio em 20 espaços e preenche o vazio com '='
+            print(f'4 / 2 é {4 / 2:.2f}') # Faz a divisão de 4 e 2 e imprime somente com 2 casas decimais
+        - end=''
+            Junta a primeira linha com a proxima
+        - \n
+            Cria uma nova linha
+
+AULA08: (Utilizando Módulos)
+    - Conteúdos adicionais Módulos
+        exemplos:
+            import bebida:
+                café
+                refrigerante
+                leite
+                chá
+                suco
+            from bebida import café (Importa somente o café)
+            import math:
+                ceil       # Arredonda o número pra cima
+                floor      # Arredonda o número pra baixo
+                trunc      # Transforma o número em inteiro
+                pow        # Faz potência
+                sqrt       # Faz raiz quadrada
+                factorial  # Faz o fatorial
+            from math import sqrt, floor (Importa a função sqrt e a floor)
+    - 'Ctrl' + 'Space' Da sugestões para o usuário
+
+AULA09: (Manipulando Texto)
+    - 'Curso em Vídeo' = String ou cadeia de texto
+
+    - Fatiamento
+        Manipula uma cadeia de texto
+        exemplos:
+            frase = 'Curso em Vídeo Python'
+            print(frase[9])      # Imprime 'V'
+            print(frase[9:13])   # Imprime 'Víde'
+            print(frase[9:21])   # Imprime 'Curso em Vídeo'
+            print(frase[9:21:2]) # Imprime 'VdoPto'
+            print(frase[:5])     # Imprime 'Curso'
+            print(frase[15:])    # Imprime 'Python'
+            print(frase[9::3])   # Imprime 'VePh'
+
+    - Análise
+        Analisa uma frase
+        exemplos:
+            len(frase)                # Mostra quantas caracteres tem a frase
+            frase.count('o')          # Conta quantos 'o' tem na frase
+            frase.count('o', 0, 13)   # Conta quantos 'o' tem na frase entre a caractere 0 e 13
+            frase.find('deo')         # Diz em que caractere começou 'deo'
+            frase.find('Android')     # 'Android' não existe dentro da frase, então ele imprime -1
+            'Curso' in frase          # Diz se dentro da frase existe a palavra 'Curso'
+
+    - Transformação
+        Muda uma frase
+        exemplos:
+            Muitas métodos tem as variáveis R e L
+            frase.replace('Python', 'Android')  # Substitui 'Python' por 'Android'
+            frase.upper()                       # Transforma todas as caracteres em maiúsculas
+            frase.lower()                       # Transforma todas as caracteres em minúsculas
+            frase.capitalize()                  # Transforma todas as caracteres em minúsculas e a primeira fica em maiúscula
+            frase.title()                       # Transforma todas as primeiras letras das palavras em maiúsculas e o resto em minúsculas
+            frase = '   Aprenda Python   '
+            frase.strip()                       # Remove todos os espaços do começo e do final
+            frase.rstrip()                      # Remove somente os espaços do final
+            frase.lstrip()                      # Remove somente os espaços do começo
+
+    - Divisão
+        frase = 'Curso em Vídeo Python'
+        Divide uma frase
+            frase.split()       # Pega cada palavra seperada por espaços e 'junta' elas
+            - Junção
+                '-'.join(frase) # Junta todos os elementos de frases e vai separalos com '-'
+
+    - Se colocar '''Oi mano     # Consegue Escrever um texto em varias linhas somente com um print
+                    De boa? '''
+
+AULA10 - (Condições (Parte 1))
+    - If e Else
+        exemplos:
+            tempo = int(input('Quantos anos tem seu carro? '))
+            if tempo <= 3:                  # Se o tempo do carro for menor ou igual que três ele
+                print('Carro novo!')        # imprime 'Carro novo!'
+
+            else:                           # Se a condição acima for falsa ele
+                print('Carro velho!')       # imprime 'Carro velho!'
+            print('--FIM--')
+            ou
+            print('Carro novo!' if tempo <= 3 else 'Carro velho!') # Imprima 'Carro novo!' se o tempo for menor ou igual que três
+            print('--FIM--')                                       # se não imprima 'Carro velho'
+
+    - Quando so tem 'if' é chamado de condição simples, quando não tem so 'if' é chamado de 'condicional'
+
+AULA11 - (Cores no terminal)
+    - Cores
+        Style
+            0 = None
+            1 = Negrito
+            4 = Sublinhado
+            7 = Invertido
+        Texto
+            30 = Branco
+            31 = Vermelho
+            32 = Verde
+            33 = Amarelo
+            34 = Azul
+            35 = Magenta
+            36 = Azul claro
+            37 = Cinza
+        Fundo
+            40 = Branco
+            41 = Vermelho
+            42 = Verde
+            43 = Amarelo
+            44 = Azul
+            45 = Magenta
+            46 = Azul claro
+            47 = Cinza
+
+    - Primeira forma de colocar cor
+        '\033[4;1;30;45mOlá, Mundo!' # Imprime 'Olá, Mundo!' em branco, negrito, sublinhado e o fundo lilas
+
+    - Segunda forma de colocar cor
+        'Olá! Muito prazer em te conhecer, {}{}{}'.format('\033[4;34m', nome, '\033[m')
+
+    - Terceira forma de colocar cor
+        cores = {'limpa': '\033[m',
+                 'amarelo: '\033[34m',}
+        'Olá, {}Mundo!{}'.format(cores['amarelo'], cores['limpa'])
+
+CURSO DE PYTHON 3 - MUNDO02 - CURSO EM VÍDEO!
+
+AULA12 - (Condições Aninhadas)
+    - If se lê 'se'
+
+    - Elif se lê 'se não se'
+
+    - Else se lê 'se não'
+
+    - Condições Aninhadas
+        São condições com varias altenartivas
+        exemplos:
+            nome = str(input('Qual é seu nome? '))
+            if nome == 'Rodrigo':                 # Se nome for igual a 'Rodrigo'
+                print('Que nome belo!')           # imprime 'Que nome belo!'
+
+            elif nome == 'Lucas':                 # Se não se o nome for igual a 'Lucas'
+                print('Que nome merda!')          # imprime 'Que nome merda!'
+
+            else:                                 # Se não
+                print('Que nome normal!')         # imprime 'Que nome normal!'
+
+    - if 7 > media >= 5:
+
+    - if media >=5 and media < 7:
+
+AULA13 - (Estrutura de repetição for)
+    - laço for
+        s = 0
+        for c in range(0, 4):                    # Cria um laço que repete os codigos abaixos 3 vezes
+            n = int(input('Digite um valor: ')   # Lê um valor
+            s += n                               # Faz a soma de cada 'n'
+
+AULA14 - (Estrutura de repetição while)
+    - laço while
+        while not maça:    # Enquanto não maçã
+            if chão:       # Se tiver chão
+                passo      # Dê um passo
+            if buraco:     # Se tiver buraco
+                pula       # Dê um pulo
+            if moeda:      # Se tiver moeda
+                pegua      # Pegue
+        pegua
+
+AULA15 - (Interrompendo repetições while)
+    - Usando break
+        while True:            # Loop infinito
+            if chao:           # Se tiver chão
+                passo          # Dê um passo
+            if vazio:          # Se tiver vazio
+                pule           # Pule
+            if moeda:          # Se tiver moeda
+                pega           # Pegue
+            if trofeu          # Se tiver trofeu
+                pula           # Pule e
+                break          # Interrompa o laço
+        pega
+
+     - fStrings
+        n1 = 1
+        print(f'O número {n1} tem o dobro {n1 * 2}')
+
+CURSO DE PYTHON 3 - MUNDO03 - CURSO EM VÍDEO!
+
+AULA16 - (Tuplas)
+    - Toda variável simples recebe um espaço na memória
+
+    - Toda variável composta pode receber mais de um espaço na memória
+
+    - No python são possíveis três formas para fazer uma variável composta
+        Primeira forma:
+            Tuplas
+        Segunda forma:
+            Listas
+        Terceira forma:
+            Dicionários
+
+    - Fatiamento com tuplas:
+        lanche = (hamburguer, suco, pizza, pudim)
+        print(lanche[2])         # Imprime 'pizza'
+        print(lanche[0:2])       # Imprime 'hamburguer' e 'suco'
+        print(lanche[1:])        # Imprime do 'suco', 'pizza' e 'pudim'
+        print(lanche[-1])        # Imprime 'pudim'
+        print(lanche[-2])        # Imprime 'pizza'
+
+    - Usando métodos em tuplas
+        lanche = (hamburguer, suco, pizza, pudim)
+        len(lanche)              # Vale 4
+
+    - Usando estruturas de controle em tuplas
+        lanches = (hamburguer, suco, pizza, pudim)
+        for c in lanches:        # Eu não dei um valor a variável 'c', então ele vai ser criada automaticamente
+            print(c)             # Sendo uma variável simples (aceitando somente um valor)
+                                 # Portanto essas duas linhas de codigo vão imprimir o primeiro item da lista até o último
+
+    - As tuplas são IMUTÁVEIS    # Ou seja não é possível trocar um item dentro de uma tupla
+
+    - Toda tupla é feita somente com parênteses ou sem nada
+        exemplos:
+            lanche = (hamburguer, suco, pizza, pudim)           # Perceba que cada item é separdo por uma vírgula
+            lanche = hamburger, suco, pizza, pudim
+
+    - Mais sobre a aula 16 em 'aula16.py'
+
+AULA17 - (Listas (Parte 1) )
+    - Diferente das tuplas, as listas podem ser mutáveis
+        exemplos:
+            lanche = ['hambúrguer', 'suco', 'pizza', 'pudim']
+            lanche[3] = 'sorvete'
+            print(lanche)         # Imprime ['hambúrguer', 'suco', 'pizza', 'sorvete']
+
+    - Métodos append e insert
+                       0           1       2        3
+        lanche = ['hambúrguer', 'suco', 'pizza', 'pudim']
+        lanche.append('cookie')                                 # Adiciona 'cookie' na lista
+                       0           1       2        3        4
+        lanche = ['hambúrguer', 'suco', 'pizza', 'pudim', 'cookie']
+        lanche.insert(0, 'hotdog')                              # Insere 'hotdog' na posição zero
+                     0            1          2       3        4         5
+        lanche = ['hotdog', 'hambúrguer', 'suco', 'pizza', 'pudim', 'cookie']
+
+    - Comandos para apagar um elemento
+                     0            1          2       3        4         5
+        lanche = ['hotdog', 'hambúrguer', 'suco', 'pizza', 'pudim', 'cookie']
+        del lanche[3]                                      # Remove a pizza
+        lanche.pop(3)                                      # Também remove a pizza, se usarmos somente
+                                                           # lanche.pop() ele remove o último elemento
+        lanche.remove('pizza')                             # Remove a pizza pelo conteúdo
+                     0            1          2       3         4
+        lanche = ['hotdog', 'hambúrguer', 'suco', 'pudim', 'cookie']
+
+        - Usando o if
+            if 'pizza' in lanche:                          # Se a pizza estiver no lanche
+                lanche.remove('pizza')                     # Remova a pizza
+
+    - Criando listas usando range
+        valores = list(range(4, 11, 2))                 # Cria uma lista de 4 a 11 pulando de 2 em 2
+                   0  1  2  3
+        valores = [4, 6, 8, 10]
+
+    - Método sort
+        valores = [8, 2, 5, 4, 9, 3, 0]
+        valores = valores.sort()                        # Organiza os valores
+        valores = [0, 2, 3, 4, 5, 8, 9]
+        - Usando parâmetro reverse
+            valores = [0, 2, 3, 4, 5, 8, 9]
+            valores = valores.sort(reverse=True)        # Faz a reversão de uma lista
+            valores = [9, 8, 5, 4, 3, 2, 0]
+
+    - Mais sobre a aula 17 em 'aula17.py'
+
+AULA18 - (Listas (Parte 2) )
+    - Colocando listas dentro de uma lista
+        pessoas = [['Pedro', 25], ['Maria', 19], ['João', 32]]
+        print(pessoas[0][0])                         # Imprime 'Pedro'
+        print(pessoas[1][1])                         # Imprime 19
+        print(pessoas[2][0])                         # Imprime 'João'
+
+    - Mais sobre a aula 18 em 'aula18.py'
+
+AULA19 - (Dicionários)
+    - Os dicionário são estruturas de dados semelhantes a tuplas e listas, mas são literais
+        exemplos:
+            dados = dict()
+            dados = {'nome': 'Pedro', 'idade': 25}
+            print(dados['nome'])            # Imprime 'Pedro'
+            print(dados['idade'])           # Imprime 25
+            dados['sexo'] = 'M'             # Vai criar o elemento 'sexo' e adicionar o 'M'
+            filme = {'titulo': 'Star Wars',
+                     'ano': 1977,
+                     'diretor': 'George Lucas'
+                    }
+
+    - Removendo elementos dos dicionários
+        dados = {'nome': 'Pedro', 'idade': 25, 'sexo': 'M'}
+        del dados['idade']                  # Remove o elemento 'idade'
+        dados = {'nome': 'Pedro', 'sexo': 'M'}
+
+    - Diferença entre valor, chaves e itens
+        filme = {'titulo': 'Star Wars',
+                 'ano': 1977,
+                 'diretor': 'George Lucas'
+                }
+        print(filme.values())               # Pega somente os valores 'Star Wars' por exemplo
+        print(filme.keys())                 # Pega somente as keys 'titulo' por exemplo
+        print(filme.items())                # Pega os valores e as keys
+
+    - Usando o for
+        for k, v in filme.items():          # Imprime 'O titulo é Star Wars', 'O ano é 1977'
+            print(f'O {k} é {v}')           # E 'O diretor é George Lucas'
+
+    - Usando dicionários dentro de listas
+        locadora = [{'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'},
+                    {'titulo': 'Avengers', 'ano': 2012, 'diretor': 'Joss Whadon'},
+                    {'titulo': 'Matrix', 'ano': 1999, 'diretor': 'Wachowski'}]
+        print(locadora[0]['ano'])                 # Imprime 1977
+        print(locadora[2]['titulo'])              # Imprime 'Matrix'
+
+    - Mais sobre a aula 19 em 'aula19.py'
+
+AULA20 - (Funções (Parte 1) )
+    - Em todas as linguagens de programações as funções são 'rotinas'
+        exemplos:
+            def mostraLinha():
+                print('-----------------------------------')
+            mostraLinha()
+            print('           SISTEMA DE ALUNOS           ')
+            mostraLinha()
+            mostraLinha()
+            print('        CADASTRO DE FUNCIONÁRIOS       ')
+            mostraLinha()
+            mostraLinha()
+            print('            ERRO DO SISTEMA            ')
+            mostraLinha()
+
+    - Usando parâmetros
+        def mensagem(msg):
+        print('-' * 30)
+        print(msg)
+        print('-' * 30)
+
+    - Fazendo uma função com espaço ilimitado
+        def contador(*num):             # '*' = Desempacotar
+            print(num)
+        contador(1, 2, 3, 4, 5, 6)      # Imprime os valores em forma de tupla
+
+    - Usando listas
+        def dobra(lst):
+            pos = 0
+            while pos < len(lst):
+                lst[pos] *= 2
+                pos += 1
+        valores = [7, 2, 5, 0, 4]
+        print(valores)
+
+    - Mais sobre a aula 20 em 'aula20.py'
+
+AULA21 - (Funções (Parte 2))
+    - Interactive Help
+        - Para obter uma ajuda iterativa no python basta usar help() ou __doc__
+            - Algumas maneiras de usar a função help() e __doc__:
+                - Primeira maneira:
+                    # Primeiro abra o Python Console
+                    # Segundo digite help()
+                    # Depois basta escrever a função para ver seu conteúdo
+                    # Para sair do Python Console, basta digitar 'quit'
+                - Segunda maneira:
+                    # Basta digitar help(função)
+                    exemplo:
+                        help(print)
+                        print(...)
+                - Terceira maneira:
+                    # A terceira maneira é usando print(função.__doc__)
+
+    - Docstrings
+        - Uma 'docstring' é basicamente uma string de documentação que é exatamente o que está acima
+        - Quando se coloca 'help(input)' ele mostra a 'docstring' do comando input
+        - Todas as funcionalidades internas do python tem a sua  própria 'docstring'
+        exemplo de uma função criada pelo usuário e criando uma docstring:
+            def contador(i, f, p):
+                c = i
+                while c <= f:
+                    print(f'{c}', end='..')
+                    c += p
+                print('FIM!')
+
+            contador(2, 10, 2)
+            # Os número que estão embaixo é o que a gente chama de 'parâmetro formal'
+            # Será que se eu digitar 'help(contador)' ele mostra uma 'docstring'?
+            # Na verdade ele so mostra os parâmetros :(
+            # Mas para resolver isso basta usar as 'docstrings'
+
+            # Para usar as 'docstrings' tem que abrir aspas três vezes embaixo de 'def'
+            # E para fechar a 'docstring' é com três aspas também
+                exemplo:
+                    def contador(i, f, p):
+                    """
+                        -> Faz uma contagem e mostra na tela.
+                        :param i: início da contagem
+                        :param f: fim da contagem
+                        :param p: passo da contagem
+                        :return: sem retorno
+                    """
+                    c = i
+                    while c <= f:
+                        print(f'{c} ', end='')
+                        c += p
+                    print('FIM!')
+
+    - Parâmetros opcinais
+        def somar(a, b, c):
+            s = a + b + c
+            print(f'A soma vale {s}')
+
+
+        somar(3, 2, 5)      # a = 3, b = 2, c = 5
+        somar(8, 4)         # a = 8, b = 4, c = ? da ERRO!
+
+        # Modificando o código original
+        def somar(a=0, b=0, c=0):
+            s = a + b + c
+            print(f'A soma vale {s}')
+
+
+        somar(3, 2, 5)      # a = 3, b = 2, c = 5
+        somar(8, 4)         # a = 8, b = 4, c = 0 NÃO da ERRO!
+        somar()             # a = 0, b = 0, c = 0 NÃO da ERRO!
+
+    - Escopo da variáveis
+        - Basciamente na programação escopo é onde a variável vai existir e deixa de existir
+        - Mais sobre Escopo da variáveis em 'aula21c.py'
+        - Usando o comando 'global variavel' ele faz com que a variável dentro da função seja global
+            exemplo:
+                def funcao():
+                    global n1
+                    n1 = 4
+                    print(f'N1 dentro vale {n1}')
+
+
+                n1 = 2
+                funcao()
+                print(f'N1 fora vale {n1}')
+
+
+    - Retorno de resultados
+        - Use o 'return' para retornar valores
+            exemplo:
+                def somar(a=0, b=0, c=0):
+                    s = a + b + c
+                    return s
+
+
+                r1 = somar(3, 2, 5)
+                r2 = somar(1, 7)
+                r3 = somar(4)
+                print(f'Meus cálculos deram {r1}, {r2}, {r3}')
+
+    - Mais sobre a aula 21 em 'aula21.py'
+
+AULA22 - (Módulos e Pacotes)
+    - Para saber vá em 'PycharmProjects\modulos'
+
+AULA23 - (Tratamento de Erro e Exceções)
+    - Erros são diferentes de exceções
+
+    - Exemplos de erros e exceções:
+        primt('Oi')
+        # Erro: SyntaxError
+        print(x)
+        # Exceção: 'x' não esta definido
+        n = int(input('Digite um valor: ')) # O usuário digita 'a'
+        # Exceção: ValueError
+        a = int(input('Numerador: '))       # O usuário digita '8'
+        b = int(input('Denominador: '))     # O usuário digita '0'
+        r = a / b
+        # Exceção: ZeroDivisionError
+        r = 2 / '2'
+        # Exceção: TypeError
+        lst = [3, 6, 4]
+        print(lst[3])
+        # Exceção: IndexError (Nos dicionários seria 'KeyError')
+        import uteis
+        # Exceção: ModuleNotFoundError (Modúlo não encontrado)
+
+    - Algumas das Exceções do Python
+        - NameError, ValueError, ZeroDivisionError, TypeError, IndexError, ConectionError
+        - KeyError, EOFError, Keyboardinterrupt, OSError, MemoryError, RuntimeError
+
+    - Uma dica: Vai no google e pesquisa 'python exceptions' ou 'python exceptions list'
+
+    - Comando 'try:' e 'except:'
+        - 'try' seria 'tente' e se falhar ele executa o 'except'
+
+    - Mais sobre a aula 23 em 'aula23.py'
